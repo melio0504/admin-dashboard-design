@@ -7,20 +7,120 @@
 }
 
 :root {
-    --sidebar-bg: ;
-    --dashboard-bg: #eee;
+    --header-bg: #28282B;
+    --dashboard-bg: #000000;
+    --font-family-base: 'Montseratt', sans-serif;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
 }
 
-body {
-    
+html, body {
+    font-family: var(--font-family-base);
+    line-height: 1.3;
 }
 
 .main-wrapper {
-    /* display: grid;
-    grid-template-columns: 100px 500px;
-    grid-template-rows: 1fr 1fr; */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(4, 1fr);
 }
 
-.sidebar {
+aside {
+    grid-row: span 5;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(0, 0, 0, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.12) 0%, transparent 50%),
+        repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 1px, transparent 1px, transparent 4px),
+        #7a0000;
+    background-blend-mode: multiply;
+    filter: brightness(1.1) contrast(1.2);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2em;
+}
 
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-base);
+    margin-bottom: 50px;
+}
+
+.logo > img {
+    height: 80px;
+    width: 80px;
+}
+
+.logo > h1 {
+    font-size: var(--font-size-xl);
+    user-select: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    font-size: var(--font-size-lg);
+    margin-left: 20px;
+}
+
+.nav-link {
+    height: 30px;
+    width: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: var(--font-size-lg);
+}
+
+small {
+    margin-top: auto;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    font-style: italic;
+    font-weight: 500;
+}
+
+header {
+    background-color: var(--header-bg);
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+input {
+    height: 50px;
+    width: 400px;
+    align-self: center;
+    font: inherit;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #ffffff;
+    height: 80px;
+}
+
+main {
+    background-color: var(--dashboard-bg);
+    grid-column: 2;
+    grid-row: 2 / 5;
 }
