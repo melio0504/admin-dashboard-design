@@ -7,8 +7,6 @@
 }
 
 :root {
-    --header-bg: #28282B;
-    --dashboard-bg: #000000;
     --font-family-base: 'Montseratt', sans-serif;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -40,7 +38,7 @@ aside {
         #7a0000;
     background-blend-mode: multiply;
     filter: brightness(1.1) contrast(1.2);
-    color: #ffffff;
+    color: #eee;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -62,6 +60,7 @@ aside {
 
 .logo > h1 {
     font-size: var(--font-size-xl);
+    color: #eee;
     user-select: none;
 }
 
@@ -97,31 +96,69 @@ small {
 }
 
 header {
-    background-color: var(--header-bg);
+    background-color: #181818;
+    color: #eee;
     height: 100%;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-icon {
+    height: 30px;
+    width: 30px;
 }
 
 input {
-    height: 50px;
-    width: 400px;
+    height: 40px;
+    width: 300px;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #eee;
     align-self: center;
     font: inherit;
 }
 
+.time {
+    font-size: var(--font-size-base);
+}
+
+.general {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notif-bell {
+    height: 30px;
+    width: 30px;
+}
+
 .profile {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    background-color: #ffffff;
-    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prof-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 20px;
+}
+
+.profile > p {
+    font-size: var(--font-size-lg);
 }
 
 main {
-    background-color: var(--dashboard-bg);
     grid-column: 2;
     grid-row: 2 / 5;
+    background-color: #000000;
 }
