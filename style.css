@@ -24,10 +24,10 @@ html, body {
 }
 
 .main-wrapper {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: minmax(200px, 260px) 5fr;
+    grid-template-rows: 150px repeat(3, 1fr);
 }
 
 aside {
@@ -44,7 +44,7 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 2em;
+    padding: 1em;
 }
 
 .logo {
@@ -52,6 +52,7 @@ aside {
     align-items: center;
     font-size: var(--font-size-base);
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 .logo > img {
@@ -97,7 +98,7 @@ small {
 
 header {
     background-color: var(--header-bg);
-    height: 25vh;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
